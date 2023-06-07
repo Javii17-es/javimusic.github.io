@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>MÚSICA JAVI</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: transparent;
+            border: 1px solid #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 48px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8), 0 0 50px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 255, 255, 0.8), 0 0 70px rgba(255, 255, 255, 0.8), 0 0 80px rgba(255, 255, 255, 0.8);
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ffffff;
+            padding-bottom: 10px;
+        }
+
+        .menu a {
+            font-family: 'Rubik', sans-serif;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .menu a:hover {
+            color: #f8d004;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+
+        .section-text {
+            font-family: 'Rubik', sans-serif;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+
+        .audio-player {
+            margin-bottom: 20px;
+        }
+
+        .audio-player h3 {
+            font-family: 'Rubik', sans-serif;
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+
+        .audio-player audio {
+            width: 100%;
+        }
+
+        .contact-section {
+            display: none;
+        }
+
+        .contact-info {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .contact-info h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+
+        .contact-info p {
+            font-family: 'Rubik', sans-serif;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+
+        .button {
+            background-color: #f8d004;
+            color: #121212;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-family: 'Rubik', sans-serif;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+
+        .button:hover {
+            background-color: #ffc107;
+        }
+
+        .bordered {
+            border: 1px solid #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .decorated {
+            background-color: transparent;
+            color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .decorated h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .decorated p {
+            font-family: 'Rubik', sans-serif;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .decorated .button {
+            background-color: #121212;
+            color: #f8d004;
+        }
+
+        .bordered .button {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .creator-info {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #121212;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Rubik', sans-serif;
+            font-size: 16px;
+            text-align: center;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">MÚSICA JAVI:</h1>
+
+        <div class="menu">
+            <a href="#" onclick="showSection('songs')">Canciones</a>
+            <a href="#" onclick="showSection('contact')">Contacto</a>
+        </div>
+
+        <div id="songs" class="section hidden">
+            <div class="decorated">
+                <h2 class="section-title">Canciones:</h2>
+
+                <div class="audio-player">
+                    <h3 class="section-text">3 De Abril:</h3>
+                    <audio controls>
+                        <source src="cancion1.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="audio-player">
+                    <h3 class="section-text">Base Cancion:</h3>
+                    <audio controls>
+                        <source src="cancion2.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="audio-player">
+                    <h3 class="section-text">Canción 3</h3>
+                    <audio controls>
+                        <source src="cancion3.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="section hidden">
+            <div class="decorated">
+                <div class="contact-info">
+                    <h2 class="section-title">Contacto:</h2>
+                    <p class="section-text">Instagram: _Javii_.17</p>
+                    <p class="section-text">Sigueme y cualquier duda no dudes en hablarme !!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="creator-info">
+            
+        </div>
+
+        <script>
+            function showSection(sectionId) {
+                var sections = document.getElementsByClassName("section");
+                for (var i = 0; i < sections.length; i++) {
+                    if (sections[i].id === sectionId) {
+                        sections[i].classList.remove("hidden");
+                    } else {
+                        sections[i].classList.add("hidden");
+                    }
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
